@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140813191925) do
+ActiveRecord::Schema.define(version: 20140813200905) do
 
-  create_table "menu_items", force: true do |t|
+  create_table "items", force: true do |t|
     t.string   "name"
     t.float    "price",          limit: 24
     t.string   "workflow_state"
