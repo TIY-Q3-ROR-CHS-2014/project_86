@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20140813191925) do
   end
 
   create_table "menus", force: true do |t|
+    t.string   "name"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,16 +37,23 @@ ActiveRecord::Schema.define(version: 20140813191925) do
   end
 
   create_table "orders", force: true do |t|
+    t.integer  "table_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "restaurants", force: true do |t|
+    t.string   "name"
+    t.integer  "location"
+    t.text     "description"
+    t.integer  "menu_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "tables", force: true do |t|
+    t.integer  "number"
+    t.integer  "restaraunt_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
