@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140813174731) do
+ActiveRecord::Schema.define(version: 20140813191925) do
 
   create_table "menu_items", force: true do |t|
     t.datetime "created_at"
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 20140813174731) do
   end
 
   create_table "menus", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "order_items", force: true do |t|
+    t.integer  "order_id"
+    t.integer  "menu_item_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
