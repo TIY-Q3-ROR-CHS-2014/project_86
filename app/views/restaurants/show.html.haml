@@ -1,7 +1,22 @@
-%h1 Show Restuarant
-%br
-=@restaurant.name
+%h1.text-center
+  =@restaurant.name
 
-- @menus.each do |menu|
-  %li
-    = link_to menu.name, menus_path(menu)
+%div.row
+  %div.col-lg-4
+    %h3.text-center
+      =@menu.name
+    %h4.text-center
+      =@menu.description
+    %ul
+    - @menu.items.each do |item|
+      %li
+        = item.name
+        = "$ #{item.price}"
+        %br
+  %div.col-lg-8
+    %h3.text-center
+      Tables Go Here
+
+
+
+  
