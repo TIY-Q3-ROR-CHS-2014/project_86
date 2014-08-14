@@ -4,13 +4,16 @@
 %div.row
   %div.col-lg-4
     - @restaurant.menus.each do|menu|
-      = menu.name
-      = menu.description
+      %h3.text-center
+        = menu.name
+        %br
+      %h4.text-center
+        = menu.description
       %ul
       - menu.items.each do |item|
         %li
-        = item.name
-        = item.price
+          = item.name
+          = item.price
 
 
   %div.col-lg-8
