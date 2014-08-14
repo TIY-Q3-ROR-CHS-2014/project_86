@@ -7,7 +7,7 @@ end
 
 def show 
   @restaurant = Restaurant.find params[:id]
-  @menu = @restaurant.menu
+  @menus = Menu.all
 end
 
 def new 
