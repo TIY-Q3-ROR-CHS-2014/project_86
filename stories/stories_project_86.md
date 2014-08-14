@@ -6,7 +6,7 @@
 
 ### Stories
 
-#### 1. restaraunt Table
+#### 1. restaraunts Table
 
 **Resources**
 
@@ -32,7 +32,7 @@ Restaraunt-
 30 min
 
 
-#### 2. menu Table
+#### 2. menus Table
 
 **Resources**
 
@@ -56,7 +56,7 @@ Menu-
 30 min
 
 
-#### 3. menu_item Table
+#### 3. items Table
 
 **Resources**
 
@@ -80,7 +80,10 @@ Menu-
 
 30 min
 
+###Stories
 
-
+Name | Resources | Description | Notes | Estimate
+-----|-----------|-------------|-------|---------
+restaraunts table|mysql12, activerecord|
 
 
