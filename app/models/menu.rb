@@ -1,6 +1,6 @@
 class Menu < ActiveRecord::Base
 
-  has_many :menu_items, dependent: :destroy
-  has_many :restaraunts
+  has_many :items, dependent: :destroy
+  has_many :restaraunts, inverse_of: :menu
 
 end
