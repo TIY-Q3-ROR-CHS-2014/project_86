@@ -1,7 +1,7 @@
 class RestaurantMenu < ActiveRecord::Base
-belongs_to :restuarant
-belongs_to :menu
-
+  
+  belongs_to :restuarant
+  belongs_to :menu
 
 end
 

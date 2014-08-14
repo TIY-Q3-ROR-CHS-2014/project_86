@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   resources :restaurants do
     resources :tables do
+      member do 
+        get :transition
+      end
       resources :orders
     end
   end
