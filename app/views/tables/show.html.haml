@@ -1,0 +1,17 @@
+%div
+  %h3
+    =@restaurant.name
+  %h4
+    =@table.number
+  %div
+    %table
+      %tr
+        %th Order ID
+        %th Order Total
+      %tr
+        %td= link_to "New Order", new_restaurant_table_order(@restaurant, @table)
+        %td
+      - @table.orders.each do |order|
+        %tr
+          %td= order.id
+          %td= order.items.sum(:price)
