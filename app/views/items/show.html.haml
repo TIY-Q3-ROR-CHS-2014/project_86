@@ -1,0 +1,23 @@
+
+%h1.text-center
+  =@item.name
+
+%div.row
+  %div.col-lg-4
+  
+    %h3.text-center
+      = @item.name
+      %br
+    %h4.text-center
+      = @item.price
+
+        
+    %ul
+      %li= @item.workflow_state
+      %li= @item.season
+      
+
+
+  %div.col-lg-8
+    %h3.text-center
+      Tables Go Here
