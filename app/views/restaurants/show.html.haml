@@ -3,16 +3,16 @@
 
 %div.row
   %div.col-lg-4
-    %h3.text-center
-      =@menu.name
-    %h4.text-center
-      =@menu.description
-    %ul
-    - @menu.items.each do |item|
-      %li
+    - @restaurant.menus.each do|menu|
+      = menu.name
+      = menu.description
+      %ul
+      - menu.items.each do |item|
+        %li
         = item.name
-        = "$ #{item.price}"
-        %br
+        = item.price
+
+
   %div.col-lg-8
     %h3.text-center
       Tables Go Here
