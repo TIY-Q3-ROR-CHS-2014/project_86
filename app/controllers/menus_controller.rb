@@ -12,10 +12,6 @@ def show
   @menu = Menu.find params[:id]
 end
 
-def index
-  @menu = Menu.all
-end
-
 def create
   @menu = Menu.create menu_params
   redirect_to menus_path

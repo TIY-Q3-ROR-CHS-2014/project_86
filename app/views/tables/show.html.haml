@@ -9,7 +9,7 @@
         %th Order ID
         %th Order Total
       %tr
-        %td= link_to "New Order", new_restaurant_table_order(@restaurant, @table)
+        %td= link_to "New Order", new_restaurant_table_order_path(@restaurant, @table)
         %td
       - @table.orders.each do |order|
         %tr

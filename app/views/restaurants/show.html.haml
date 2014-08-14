@@ -3,7 +3,7 @@
 
 %div.row
   %div.col-lg-4
-    - @restaurant.menus.each do|menu|
+    - @restaurant.menus.each do |menu|
       %h3.text-center
         = menu.name
         %br
@@ -19,6 +19,10 @@
   %div.col-lg-8
     %h3.text-center
       Tables Go Here
+    %ul
+    - @restaurant.tables.each do |table|
+      %li= link_to table.number, restaurant_table_path(@restaurant, table)
+
 
 
 
