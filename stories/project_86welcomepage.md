@@ -29,7 +29,7 @@ Menu Index
 The business owner would use this to access menus.
 
 ###Time Estimate
-2 hour
+2 hours
 
 ##Menu Show
 
@@ -40,5 +40,28 @@ The business owner would use this to access menus.
 This will show the menu options to the user.
 
 ###Time Estimate
-2 hour
+2 hours
 
+##Order CRUD
+####Resources 
+-ruby on rails
+#####Description
+Setting up the CRUD for orders will make our order variable work in this application
+###Time Estimate
+2 hours
+##Order View
+####Resources
+-ruby on rails
+-HAML
+#####Description
+This displays the order function of our application.
+###Time Estimate
+1 hour
+##Menu View
+####Resources
+-ruby on rails
+-HAML
+#####Description
+This displays the menu function of our application.
+###Time Estimate
+1 hour
