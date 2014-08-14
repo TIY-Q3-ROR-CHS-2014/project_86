@@ -1,5 +1,5 @@
 class TablesController < ApplicationController
-before_action :find_table, only: [:show, :edit, :update, :destroy, :transition]
+  before_action :find_table, only: [:show, :edit, :update, :destroy, :transition]
 
   before_action :find_restaurant
 
@@ -8,13 +8,10 @@ before_action :find_table, only: [:show, :edit, :update, :destroy, :transition]
   end
 
   def show
-    @appointment = Appointment.new
   end
 
   def new
     @table = Table.new
-    @medications = Medication.all
-    @doctors = Doctor.all
   end
 
   def create
@@ -27,8 +24,6 @@ before_action :find_table, only: [:show, :edit, :update, :destroy, :transition]
   end
 
   def edit
-    @medications = Medication.all
-    @doctors = Doctor.all
   end
 
   def update
