@@ -1,0 +1,8 @@
+%div
+  =form_for @order do |f|
+    
+    -@restaurant.items.each do |item|
+      =check_box_tag 'order [item_ids][]', item.id, @order.items.include?(item), {id: "item_id_#{item.id}"}
+      =label_tag "item_id_#{item.id}", "#{item.name}, #{item.price}"
+
+    =f.submit
