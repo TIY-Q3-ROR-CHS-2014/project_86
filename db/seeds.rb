@@ -8,4 +8,20 @@
 
 Restaurant.create(name: "Boxcar Betty's", description: "Fried Chicken Sandwiches", menu_id: 1)
 
+Item.create(name: "Fried Chicken Sandwich", price: 6.50, menu_id: 1)
+
+Item.create(name: "Homemade French Fries" , price: 2.00, menu_id: 1)
+
+Item.create(name: "Sweet Tea", price: 1.00, menu_id: 1)
+
+Restaurant.create(name: "Ray's", description: "The Best Burgers", menu_id: 2)
+
+Item.create(name: "Burger", price: 4.00, menu_id: 2)
+
+Item.create(name: "Cheese Burger", price: 5.00, menu_id: 2)
+
+Item.create(name: "Coke", price: 1.00, menu_id: 2)
+
 Menu.create(name: "Boxcar Betty's", description: "Fried Chicken Sandwiches")
+
+Menu.create(name: "Ray's", description: "Good Burgers")
