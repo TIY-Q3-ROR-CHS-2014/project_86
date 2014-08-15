@@ -11,5 +11,8 @@
   = f.label :menu_id
   = f.text_field :menu_id
   %br
-   
+  - @menus.each do |menu|
+    = check_box_tag 'restaurant[menu_ids][]', menu.id, @restaurant.menus.include?(menu), {id: "menu_id_#{menu.id}"}
+    = label_tag "menu_id_#{menu.id}", menu.name
+    %br
   = f.submit
