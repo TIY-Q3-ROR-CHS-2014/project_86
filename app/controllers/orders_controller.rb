@@ -5,20 +5,22 @@ class OrdersController < ApplicationController
   before_action :find_restaurant
 
   def index
-    @order = Order.all
+    @orders = Order.all
   end
 
   def show
-    @order = Order.find_params[:id]
+    @items = Item.all
   end
 
   def new
     @order = Order.new
+    order_items
     @items = Item.all
   end
 
   def create
     @order = Order.create order_params
+
     if @order.save
       redirect_to restaurant_table_path(@restaurant, @table)
     else
@@ -27,7 +29,8 @@ class OrdersController < ApplicationController
   end
 
   def edit
-    @order = Order.find_params[:id]
+    order_items
+    @items = Item.all
   end
 
   def update
@@ -43,11 +46,18 @@ class OrdersController < ApplicationController
     redirect_to restaurant_table_path(@restaurant, @table)
   end
 
+  def order_items
+    Item.all.each do |item|
+      if !@order.item_ids.include?(item.id)
+        @order.order_items.build(item_id: item.id)
+      end
+    end
+  end
 
 private
 
   def order_params
-    params.require(:order).permit(:table_id, {item_ids: []})
+    params.require(:order).permit(:table_id, order_items_attributes: [:id, :quantity, :mods, :_destroy, :item_id])
   end
 
   def find_order
