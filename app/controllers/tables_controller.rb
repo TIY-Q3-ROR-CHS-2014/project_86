@@ -1,6 +1,6 @@
 class TablesController < ApplicationController
+  
   before_action :find_table, only: [:show, :edit, :update, :destroy, :transition]
-
   before_action :find_restaurant
 
   def index
@@ -32,7 +32,6 @@ class TablesController < ApplicationController
     else
       render :edit
     end
-    # @prescription = Prescription.create prescription_params
   end
 
   def destroy
@@ -50,23 +49,14 @@ private
 
   def find_table
     @table = Table.find params[:id]
-    # @prescriptions = Prescription.find params[:id]
   end
 
   def find_restaurant
     @restaurant = Restaurant.find params[:restaurant_id]
   end
 
-  # def find_prescriptions
-  #   @prescription = Prescription.find params[:]
-  # end
-
-  # def find_appointments
-
-  # end
-
-  def patient_params
-    params.require(:patient).permit(:lastname, :firstname, :description, :dob, :gender, :facility_id, {medication_ids: []}, {doctor_ids: []})
-
+  def table_params
+    params.require(:table).permit(:number, :restaurant_id)
   end
+
 end

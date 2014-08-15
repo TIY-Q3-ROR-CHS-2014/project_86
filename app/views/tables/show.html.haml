@@ -2,7 +2,7 @@
   %h3
     =@restaurant.name
   %h4
-    =@table.number
+    ="Table #{@table.number}"
   %div
     %table
       %tr
@@ -14,4 +14,4 @@
       - @table.orders.each do |order|
         %tr
           %td= order.id
-          %td= order.items.sum(:price)
+          %td= "$ #{sprintf( "%0.02f", order.items.sum(:price))}"

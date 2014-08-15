@@ -1,45 +1,53 @@
 class ItemsController < ApplicationController
-def index
-  @items = Item.all 
-  @menu = Menu.find params[:menu_id]
-  # @restaurant = Restaurant.find params[:id]
-end
+  
+  before_action :find_item, only: [:show, :edit, :update, :destroy]
+  before_action :find_menu
 
-def show 
-  @item = Item.find params[:id]
-  @menu = Menu.find params[:menu_id]
-  @menus = Menu.all
-end
+  def index
+    @items = Item.all 
+  end
 
-def new 
-  @item= Item.new
-end
+  def show 
+  end
 
-def create 
-  @item = Item.new item_params
-  @item.save
-end
+  def new 
+    @item= Item.new
+  end
 
-def edit
-  @item = Item.find params[:id]
-end
+  def create 
+    @item = @menu.items.new(item_params)
+    if @item.save
+      redirect_to menu_path(@menu)
+    else
+      render :new
+    end
+  end
 
-def update 
-  @item = Item.find params[:id]
-  @item.update_attributes item_params
-  redirect_to menu_items_path
-end 
+  def edit
+  end
 
-def destroy 
-  @item = Item.find params [:id]
-  @item.delete
-  redirect_to menu_items_path
-end
+  def update 
+    @item.update_attributes item_params
+    redirect_to menu_path(@menu)
+  end 
+
+  def destroy 
+    @item.delete
+    redirect_to menu_items_path
+  end
 
 private
-def item_params
-  params.require(:item).permit(:name, :price, :workflowstate, :season, :menu_id)
-end
 
+  def find_item
+    @item = Item.find params[:id]
+  end
+
+  def find_menu
+    @menu = Menu.find params[:menu_id]
+  end
+
+  def item_params
+    params.require(:item).permit(:name, :price, :workflowstate, :season, :menu_id)
+  end
 
 end

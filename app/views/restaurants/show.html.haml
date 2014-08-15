@@ -2,7 +2,7 @@
   =@restaurant.name
 
 %div.row
-  %div.col-lg-4
+  %div.col-lg-5
     - @restaurant.menus.each do |menu|
       %h3.text-center
         = menu.name
@@ -13,15 +13,18 @@
       - menu.items.each do |item|
         %li
           = item.name
-          = item.price
+          = "#{". " * (50 - item.name.length)} $ #{sprintf( "%0.02f", item.price)}"
 
 
-  %div.col-lg-8
+  %div.col-lg-7
     %h3.text-center
       Tables Go Here
-    %ul
-    - @restaurant.tables.each do |table|
-      %li= link_to table.number, restaurant_table_path(@restaurant, table)
+    %ul.nav.nav-pills
+      - @restaurant.tables.each do |table|
+        %li
+          = link_to restaurant_table_path(@restaurant, table) do
+            = "Table #{table.number}"
+            %span.badge 42
 
 
 
