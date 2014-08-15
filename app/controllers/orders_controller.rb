@@ -45,7 +45,7 @@ class OrdersController < ApplicationController
 private
 
   def order_params
-    params.require(:order).permit(:table_id, {item_ids: []})
+    params.require(:order).permit(:table_id, {order_items: []})
   end
 
   def find_order
