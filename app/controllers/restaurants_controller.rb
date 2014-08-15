@@ -12,6 +12,7 @@ class RestaurantsController < ApplicationController
 
   def new 
     @restaurant = Restaurant.new
+    @menus = Menu.all
   end
 
   def create 
@@ -22,6 +23,7 @@ class RestaurantsController < ApplicationController
 
   def edit
     @restaurant = Restaurant.find params[:id]
+    @menus = Menu.all
   end
 
   def update 
@@ -39,7 +41,7 @@ class RestaurantsController < ApplicationController
 private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :description, :location, :menu_id)
+    params.require(:restaurant).permit(:name, :description, :location, {menu_ids:[]})
   end
 
 end
