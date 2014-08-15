@@ -21,7 +21,7 @@ class RestaurantsController < ApplicationController
   end
 
   def edit
-    @restuarant = Restaurant.find params[:id]
+    @restaurant = Restaurant.find params[:id]
   end
 
   def update 
@@ -31,9 +31,9 @@ class RestaurantsController < ApplicationController
   end 
 
   def destroy 
-    @restaurant = Restaurant.find params [:id]
+    @restaurant = Restaurant.find params[:id]
     @restaurant.delete
-    redirect_to restuarants_path
+    redirect_to restaurants_path
   end
 
 private
