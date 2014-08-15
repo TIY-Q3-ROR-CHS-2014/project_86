@@ -12,6 +12,7 @@ class ItemsController < ApplicationController
 
   def new 
     @item= Item.new
+    @menu = Menu.find params[:menu_id]
   end
 
   def create 
@@ -33,7 +34,7 @@ class ItemsController < ApplicationController
 
   def destroy 
     @item.delete
-    redirect_to menu_items_path
+    redirect_to menu_path(@menu)
   end
 
 private
