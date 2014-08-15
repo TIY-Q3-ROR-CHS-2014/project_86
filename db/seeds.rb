@@ -25,3 +25,10 @@ Item.create(name: "Coke", price: 1.00, menu_id: 2)
 Menu.create(name: "Boxcar Betty's", description: "Fried Chicken Sandwiches")
 
 Menu.create(name: "Ray's", description: "Good Burgers")
+
+Table.create(number: "1", restaurant_id: "1")
+Table.create(number: "2", restaurant_id: "1")
+
+
+Table.create(number: "1", restaurant_id: "2")
+Table.create(number: "2", restaurant_id: "2")
