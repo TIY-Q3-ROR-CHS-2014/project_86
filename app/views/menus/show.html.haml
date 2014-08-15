@@ -9,6 +9,6 @@
       = "#{". " * (50 - item.name.length)} $ #{sprintf( "%0.02f", item.price)}"
 %div
   %p
-    = link_to "Add Menu Item", new_menu_path
-    = link_to "Edit Menu Item", edit_menu_path(@menu)
+    = link_to "Add Menu Item", new_menu_item_path(@menu)
+   
 
