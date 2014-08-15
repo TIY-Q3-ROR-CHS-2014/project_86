@@ -8,10 +8,12 @@
       %tr
         %th Order ID
         %th Order Total
+        %th
       %tr
         %td= link_to "New Order", new_restaurant_table_order_path(@restaurant, @table)
         %td
       - @table.orders.each do |order|
         %tr
-          %td= order.id
+          %td= link_to order.id, restaurant_table_order_path(@restaurant, @table, order)
           %td= "$ #{sprintf( "%0.02f", order.items.sum(:price))}"
+          %td= link_to "Edit", edit_restaurant_table_order_path(@restaurant, @table, order)

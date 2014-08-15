@@ -1,0 +1,7 @@
+%div
+  %h3= "Order ##{@order.id}"
+%div
+  %ul
+  - @order.order_items.each do |oi|
+    %li
+      =oi.item_id

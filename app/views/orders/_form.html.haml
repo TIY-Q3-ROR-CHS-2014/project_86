@@ -1,27 +1,24 @@
 %div
 =form_for [@restaurant, @table, @order] do |f|
-  
-  / -@restaurant.menus.each do |menu|
-  /   -menu.items.each do |item|
-  - @items.each do |item|
-    / = check_box_tag 'order[item_ids][]', item.id, @order.items.include?(item), {id: "item_id_#{item.id}"}
-    / = label_tag "item_id_#{item.id}", "#{item.name} $#{sprintf( "%0.02f", item.price)}"
-    / = label_tag "Quantity"
-    / = number_field_tag 'order[items][][quantity]', nil, {id: "Quantity"}
-    / = label_tag "Modifications"
-    / = text_field_tag  'order[items][][mods]', nil, {id: "Modifications"}
-    = check_box_tag 'order[order_items][][item_id]', item.id, @order.items.include?(item), {id: "item_id_#{item.id}"}
-    = label_tag "item_id_#{item.id}", "#{item.name} $#{sprintf( "%0.02f", item.price)}"
-    = label_tag "Quantity"
-    = number_field_tag 'order[order_items][][quantity]', nil, {id: "Quantity"}
-    = label_tag "Modifications"
-    = text_field_tag  'order[order_items][][mods]', nil, {id: "Modifications"}
 
-
+  = f.fields_for :order_items do |oi|
+    = oi.check_box :_destroy, {:checked => oi.object.persisted?}, '0', '1'
+    = oi.object.item.name
+    = oi.hidden_field :item_id
+    = oi.number_field :quantity
+    = oi.text_field :mods
     %br
+
+
+  / - @items.each do |item|
+  /   = check_box_tag 'order[item_ids][]', item.id, @order.items.include?(item), {id: "item_id_#{item.id}"}
+  /   = label_tag "item_id_#{item.id}", "#{item.name} $#{sprintf( "%0.02f", item.price)}"
+  /   = label_tag "Quantity"
+  /   = number_field_tag 'order_items[quantity][]', nil, {id: "Quantity"}
+  /   = label_tag "Modifications"
+  /   = text_field_tag  'order_items[mods][]', nil, {id: "Modifications"}
+  /   %br
   = f.hidden_field :table_id, value: @table.id
   =f.submit
 
-  / order[items][][id] 
-  / order[items][][quantity] 
-  / order[items][][comments]
+     
