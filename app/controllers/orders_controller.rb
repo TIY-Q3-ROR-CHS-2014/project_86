@@ -9,6 +9,7 @@ class OrdersController < ApplicationController
   end
 
   def show
+    @order = Order.find_params[:id]
   end
 
   def new
@@ -26,6 +27,7 @@ class OrdersController < ApplicationController
   end
 
   def edit
+    @order = Order.find_params[:id]
   end
 
   def update
