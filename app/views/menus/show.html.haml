@@ -1,8 +1,14 @@
 %h1 MENUS
 
 %div
+  %h2=  @menu.name
   %ul
   - @menu.items.each do |item|
-    %li= link_to item.name, menu_item_path(@menu, item)
+    %li
+      = link_to item.name, menu_item_path(@menu, item)
+      = "#{". " * (50 - item.name.length)} $ #{sprintf( "%0.02f", item.price)}"
+%div
+  %p
+    = link_to "Add Menu Item", new_menu_item_path(@menu)
 
 
