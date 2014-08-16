@@ -1,19 +1,23 @@
-%div
+%div.col-md-6
   %h3
     =@restaurant.name
   %h4
     ="Table #{@table.number}"
   %div
-    %table
+    %table.table.table-striped
       %tr
-        %th Order ID
+        %th Order No.
         %th Order Total
         %th
-      %tr
-        %td= link_to "New Order", new_restaurant_table_order_path(@restaurant, @table)
-        %td
       - @table.orders.each do |order|
         %tr
           %td= link_to order.id, restaurant_table_order_path(@restaurant, @table, order)
-          %td= "$ #{sprintf( "%0.02f", order.items.sum(:price))}"
-          %td= link_to "Edit", edit_restaurant_table_order_path(@restaurant, @table, order)
+          %td 
+            -order_total = 0
+            - order.order_items.each do |oi| 
+              -order_total+=oi.item.price
+            = "$ #{sprintf( "%0.02f", order_total)}"
+          %td= link_to "Edit", restaurant_table_order_path(@restaurant, @table, order)
+  %div    
+    = link_to "New Order", new_restaurant_table_order_path(@restaurant, @table)
+        

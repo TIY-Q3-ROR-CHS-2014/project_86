@@ -10,6 +10,7 @@ class OrdersController < ApplicationController
 
   def show
     @items = Item.all
+    @order_item = OrderItem.new
   end
 
   def new
@@ -35,7 +36,7 @@ class OrdersController < ApplicationController
 
   def update
     if @order.update_attributes order_params
-      redirect_to restaurant_table_order_path(@restaurant, @table, @order)
+      redirect_to restaurant_table_path(@restaurant, @table)
     else
       render :edit
     end
@@ -47,9 +48,11 @@ class OrdersController < ApplicationController
   end
 
   def order_items
-    Item.all.each do |item|
-      if !@order.item_ids.include?(item.id)
-        @order.order_items.build(item_id: item.id)
+    @restaurant.menus.each do |menu|
+      menu.items.each do |item|
+        if !@order.item_ids.include?(item.id)
+          @order.order_items.build(item_id: item.id)
+        end
       end
     end
   end
@@ -57,7 +60,7 @@ class OrdersController < ApplicationController
 private
 
   def order_params
-    params.require(:order).permit(:table_id, order_items_attributes: [:id, :quantity, :mods, :_destroy, :item_id])
+    params.require(:order).permit(:table_id, {item_ids: []}, order_items_attributes: [:id, :quantity, :mods, :_destroy, :item_id])
   end
 
   def find_order
