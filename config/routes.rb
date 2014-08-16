@@ -10,7 +10,9 @@ Rails.application.routes.draw do
       member do 
         get :transition
       end
-      resources :orders
+      resources :orders do
+        resources :order_items
+      end
     end
   end
   resources :menus do 
