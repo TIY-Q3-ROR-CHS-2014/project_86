@@ -1,3 +1,15 @@
+/ tried multiple ways to display corresponding images to restaurant id. no success. it looks like it would be much easier in javascript according to google. HAml is correct correct and will display your choice of image if the if-statement is removed.
+- if @restaurant == 1
+  %img.img-thumbnail{:alt => "200x200", "data-src" => "holder.js/200x200", :src => "/assets/boxcar.png", :style => "width: 200px; height: 200px;"}
+
+
+- if @restaurant == 2
+  %img.img-thumbnail{:alt => "200x200", "data-src" => "holder.js/200x200", :src => "/assets/ray.jpg", :style => "width: 200px; height: 200px;"}
+ 
+
+
+
+
 %h1.text-center
   =@restaurant.name
   %br
