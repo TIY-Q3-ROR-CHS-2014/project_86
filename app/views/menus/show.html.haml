@@ -1,7 +1,7 @@
-%h1 MENUS
+%h1= link_to "MENUS", menus_path
 
 %div
-  %h2=  @menu.name
+  %h2= @menu.name
   %ul
   - @menu.items.each do |item|
     %li
