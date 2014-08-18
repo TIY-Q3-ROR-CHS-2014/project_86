@@ -17,7 +17,8 @@
   %br
   %div
     %strong Total
-    ="#{". " * 45} $ #{sprintf( "%0.02f", order_total)}"  
+    / ="#{". " * 45} $ #{sprintf( "%0.02f", order_total)}"  
+    = to_money(total_order_cost(@order.order_items))
   %br    
   %div
   - @restaurant.menus.each do |menu|

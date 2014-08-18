@@ -17,11 +17,11 @@
         %a.navbar-brand{href: "#"} Bootstrap theme
       .navbar-collapse.collapse
         %ul.nav.navbar-nav
-          %li
-            %a{href: "/"} Home
-          %li
+          %li{class: "#{is_link_active?('welcome')}"}
+            = link_to "Home", root_path
+          %li{class: "#{is_link_active?('menus')}"}
             = link_to "Menus", menus_path
-          %li
+          %li{class: "#{is_link_active?('restaurants')}"}
             = link_to "Restaurants", restaurants_path
           %li.dropdown
             %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
