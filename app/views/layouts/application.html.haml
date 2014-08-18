@@ -17,14 +17,16 @@
         %a.navbar-brand{href: "#"} Project 86
       .navbar-collapse.collapse
         %ul.nav.navbar-nav
-          %li
-            %a{href: "/"} Home
-          %li
+          %li{class: "#{is_link_active?('welcome')}"}
+            = link_to "Home", root_path
+          %li{class: "#{is_link_active?('menus')}"}
             = link_to "Menus", menus_path
-          %li
+          %li{class: "#{is_link_active?('restaurants')}"}
             = link_to "Restaurants", restaurants_path
          
       / /.nav-collapse
   .container
+    %p.notice notice
+    %p.alert alert
     =yield
   
