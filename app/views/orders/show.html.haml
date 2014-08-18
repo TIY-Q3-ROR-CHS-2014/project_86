@@ -5,16 +5,23 @@
     %h3= "Order ##{@order.id}"
   %div
     %ul
+    - order_total = 0
     - @order.order_items.each do |oi|
       / -oi.quantity.times do
       %li
         =oi.item.name
         ="#{". " * (50 - oi.item.name.length)} $ #{sprintf( "%0.02f", oi.item.price)}"
+        - order_total += oi.item.price
         = link_to "Delete", restaurant_table_order_order_item_path(@restaurant, @table, @order, oi), method: :delete
+  %br
+  %div
+    %strong Total
+    ="#{". " * 45} $ #{sprintf( "%0.02f", order_total)}"  
+  %br    
   %div
   - @restaurant.menus.each do |menu|
     =form_for [@restaurant, @table, @order, @order_item] do |f|
-      = f.label :item_id, "Select Item"
+      = f.label :item_id, "Add Item"
       = f.select :item_id,
         options_from_collection_for_select(menu.items, 'id', 'name')
       %br
