@@ -7,7 +7,7 @@
 /   %img.img-thumbnail{:alt => "200x200", "data-src" => "holder.js/200x200", :src => "/assets/ray.jpg", :style => "width: 200px; height: 200px;"}
  
 
-%img.img-thumbnail{:alt => "200x200", "data-src" => "holder.js/200x200", :src => "/assets/#{@restaurant.name}.png", :style => "width: 200px; height: 200px;"}
+/ %img.img-thumbnail{:alt => "200x200", "data-src" => "holder.js/200x200", :src => "/assets/#{@restaurant.name}.png", :style => "width: 200px; height: 200px;"}
 
 
 
@@ -17,34 +17,31 @@
   %br
   =@restaurant.description
   %br
-  Location:
   =@restaurant.location
 
 %div.row
   %div.col-lg-5
+    %h3.text-center Menu
     - @restaurant.menus.each do |menu|
-      %h3.text-center
-        = menu.name
-        %br
       %h4.text-center
         = menu.description
       %ul
       - menu.items.each do |item|
         %li
           = item.name
-          = "#{". " * (50 - item.name.length)} $ #{sprintf( "%0.02f", item.price)}"
+          = "#{". " * (40 - item.name.length)} $ #{sprintf( "%0.02f", item.price)}"
 
 
   %div.col-lg-7
     %h3.text-center
-      Tables Go Here
+      Tables
     %ul.nav.nav-pills
       - @restaurant.tables.each do |table|
-        %li.active
+        %li
           = link_to restaurant_table_path(@restaurant, table) do
             = "Table #{table.number}"
-            %span.badge 42
-
+      %li.active
+        = link_to "Add Table", new_restaurant_table_path(@restaurant)
 
 
 

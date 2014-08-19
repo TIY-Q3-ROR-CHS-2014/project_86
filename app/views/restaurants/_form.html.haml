@@ -1,18 +1,16 @@
+
 = form_for @restaurant do |f|
   = f.label :name
-  = f.text_field :name
+  = f.text_field :name, class: "form-control"
   %br
   = f.label :description
-  = f.text_field :description
+  = f.text_area :description, class: "form-control"
   %br
   = f.label :location
-  = f.text_field :location
-  %br
-  = f.label :menu_id
-  = f.text_field :menu_id
+  = f.text_field :location, class: "form-control"
   %br
   - @menus.each do |menu|
     = check_box_tag 'restaurant[menu_ids][]', menu.id, @restaurant.menus.include?(menu), {id: "menu_id_#{menu.id}"}
-    = label_tag "menu_id_#{menu.id}", menu.name
+    = label_tag "menu_id_#{menu.id}", "#{menu.name} #{menu.description}"
     %br
   = f.submit

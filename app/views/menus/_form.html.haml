@@ -1,7 +1,7 @@
-%div
+%div.col-sm-4
   =form_for @menu do |f|
-    =f.label :name
-    =f.label :description
-    =f.text_field :name
-    =f.text_area :description
+    =f.label :name, "Name Your Menu"
+    =f.text_field :name, class: "form-control"
+    =f.label :description, "What Types of Menu Is It?"
+    =f.text_area :description, class: "form-control", placeholder: "e.g., Appetizers"
     =f.submit

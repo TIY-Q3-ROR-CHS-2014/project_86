@@ -3,17 +3,17 @@
 .row
   - @menus.each do |menu|
     .col-sm-3
-      .panel.panel-primary
+      .panel.panel-default
         .panel-heading
           %h3.panel-title
-            = link_to menu.name, menu_path(menu)
+            = link_to menu.name + " " + menu.description, menu_path(menu)
         .panel-body
           %ul
-            - for item in 0..2
+            - menu.items.each do |item|
               %li
-                = menu.items[item].name
-                = menu.items[item].price
-            %li ...
+                = item.name
+                = item.price
+            / %li ...
 
       / = link_to restaurant.name, restaurant_path(restaurant)
       / |
@@ -21,7 +21,7 @@
       / |
       / = link_to "Delete", restaurant_path(restaurant), method: :delete
   .col-sm-3
-    .panel.panel-default
+    .panel.panel-primary
       .panel-heading
         %h3.panel-title
           = link_to "Add Menu", new_menu_path
