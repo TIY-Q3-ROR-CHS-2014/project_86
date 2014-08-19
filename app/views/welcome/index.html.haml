@@ -1,6 +1,6 @@
 .theme-showcase{role: "main"}
   / Main jumbotron for a primary marketing message or call to action
-  .jumbotron
+  /.jumbotron
   
 
 
@@ -31,20 +31,21 @@
     %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
   .carousel-inner
     .item.active
-      %img.img-responsive{:src =>"assets/burger.jpeg", :alt => "Burger"}/
-      .carousel-caption
+      %img.img-responsive{:src =>"assets/burger.jpeg", :alt => "Burger", :width => "100%",  :alignment => "center"}/
+      .carousel-caption.center
         %h3 Project 86
         %p A new app to help communication in your restaurant
     .item
-      %img.img-responsive{:src => "assets/betty.jpeg", :alt => "Betty"}/
+      %img.img-responsive{:src => "assets/chix.jpeg", :alt => "Betty", :width => "100%", :alignment => "right"}/
       .carousel-caption
         %h3 Project 86
         %p For a more effective FOH staff.
     .item
-      %img.img-responsive{:src => "assets/salad.jpeg", :alt => "Salad"}/
+      %img.img-responsive{:src => "assets/salad.jpg", :alt => "Salad", :width => "100%"}/
       .carousel-caption
         %h3 Project 86
         %p For a better dining experience for your guests.
+
 %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"}
   %span.icon-prev
 %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"}
