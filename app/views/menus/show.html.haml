@@ -1,13 +1,13 @@
-%h1= link_to "MENUS", menus_path
-
-%div
-  %h2= @menu.name
+%div.jumbotron.col-sm-8.col-sm-offset-2.text-center
+  %h2
+    = @menu.name
+  %h4
+    = @menu.description
   %ul
   - @menu.items.each do |item|
     %li
       = link_to item.name, menu_item_path(@menu, item)
       = "#{". " * (50 - item.name.length)} $ #{sprintf( "%0.02f", item.price)}"
-%div
-  %p
+  %div
     = link_to "Add Menu Item", new_menu_item_path(@menu)
    

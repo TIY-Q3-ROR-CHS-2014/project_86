@@ -40,7 +40,7 @@
       Tables Go Here
     %ul.nav.nav-pills
       - @restaurant.tables.each do |table|
-        %li
+        %li.active
           = link_to restaurant_table_path(@restaurant, table) do
             = "Table #{table.number}"
             %span.badge 42

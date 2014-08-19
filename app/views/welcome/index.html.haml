@@ -1,5 +1,7 @@
 .theme-showcase{role: "main"}
   / Main jumbotron for a primary marketing message or call to action
+  %p.notice= notice
+  %p.alert= alert
   .jumbotron
   
 
@@ -55,265 +57,265 @@
 
 
 
-%p
-  = link_to "Restaurants", restaurants_path, class: "btn btn-lg btn-primary"
-  = link_to "Menus", menus_path, class: "btn btn-lg btn-primary"
+/ %p
+/   = link_to "Restaurants", restaurants_path, class: "btn btn-lg btn-primary"
+/   = link_to "Menus", menus_path, class: "btn btn-lg btn-primary"
 
 
 
 
 
-  / .page-header
-  /   %h1 Buttons
-  / %p
-  /   %button.btn.btn-lg.btn-default{type: "button"} Default
-  /   %button.btn.btn-lg.btn-primary{type: "button"} Primary
-  /   %button.btn.btn-lg.btn-success{type: "button"} Success
-  /   %button.btn.btn-lg.btn-info{type: "button"} Info
-  /   %button.btn.btn-lg.btn-warning{type: "button"} Warning
-  /   %button.btn.btn-lg.btn-danger{type: "button"} Danger
-  /   %button.btn.btn-lg.btn-link{type: "button"} Link
-  / %p
-  /   %button.btn.btn-default{type: "button"} Default
-  /   %button.btn.btn-primary{type: "button"} Primary
-  /   %button.btn.btn-success{type: "button"} Success
-  /   %button.btn.btn-info{type: "button"} Info
-  /   %button.btn.btn-warning{type: "button"} Warning
-  /   %button.btn.btn-danger{type: "button"} Danger
-  /   %button.btn.btn-link{type: "button"} Link
-  / %p
-  /   %button.btn.btn-sm.btn-default{type: "button"} Default
-  /   %button.btn.btn-sm.btn-primary{type: "button"} Primary
-  /   %button.btn.btn-sm.btn-success{type: "button"} Success
-  /   %button.btn.btn-sm.btn-info{type: "button"} Info
-  /   %button.btn.btn-sm.btn-warning{type: "button"} Warning
-  /   %button.btn.btn-sm.btn-danger{type: "button"} Danger
-  /   %button.btn.btn-sm.btn-link{type: "button"} Link
-  / %p
-  /   %button.btn.btn-xs.btn-default{type: "button"} Default
-  /   %button.btn.btn-xs.btn-primary{type: "button"} Primary
-  /   %button.btn.btn-xs.btn-success{type: "button"} Success
-  /   %button.btn.btn-xs.btn-info{type: "button"} Info
-  /   %button.btn.btn-xs.btn-warning{type: "button"} Warning
-  /   %button.btn.btn-xs.btn-danger{type: "button"} Danger
-  /   %button.btn.btn-xs.btn-link{type: "button"} Link
-  / .page-header
-  /   %h1 Tables
-  / .row
-  /   .col-md-6
-  /     %table.table
-  /       %thead
-  /         %tr
-  /           %th #
-  /           %th First Name
-  /           %th Last Name
-  /           %th Username
-  /       %tbody
-  /         %tr
-  /           %td 1
-  /           %td Mark
-  /           %td Otto
-  /           %td @mdo
-  /         %tr
-  /           %td 2
-  /           %td Jacob
-  /           %td Thornton
-  /           %td @fat
-  /         %tr
-  /           %td 3
-  /           %td Larry
-  /           %td the Bird
-  /           %td @twitter
-  /   .col-md-6
-  /     %table.table.table-striped
-  /       %thead
-  /         %tr
-  /           %th #
-  /           %th First Name
-  /           %th Last Name
-  /           %th Username
-  /       %tbody
-  /         %tr
-  /           %td 1
-  /           %td Mark
-  /           %td Otto
-  /           %td @mdo
-  /         %tr
-  /           %td 2
-  /           %td Jacob
-  /           %td Thornton
-  /           %td @fat
-  /         %tr
-  /           %td 3
-  /           %td Larry
-  /           %td the Bird
-  /           %td @twitter
-  / .row
-  /   .col-md-6
-  /     %table.table.table-bordered
-  /       %thead
-  /         %tr
-  /           %th #
-  /           %th First Name
-  /           %th Last Name
-  /           %th Username
-  /       %tbody
-  /         %tr
-  /           %td{rowspan: "2"} 1
-  /           %td Mark
-  /           %td Otto
-  /           %td @mdo
-  /         %tr
-  /           %td Mark
-  /           %td Otto
-  /           %td @TwBootstrap
-  /         %tr
-  /           %td 2
-  /           %td Jacob
-  /           %td Thornton
-  /           %td @fat
-  /         %tr
-  /           %td 3
-  /           %td{colspan: "2"} Larry the Bird
-  /           %td @twitter
-  /   .col-md-6
-  /     %table.table.table-condensed
-  /       %thead
-  /         %tr
-  /           %th #
-  /           %th First Name
-  /           %th Last Name
-  /           %th Username
-  /       %tbody
-  /         %tr
-  /           %td 1
-  /           %td Mark
-  /           %td Otto
-  /           %td @mdo
-  /         %tr
-  /           %td 2
-  /           %td Jacob
-  /           %td Thornton
-  /           %td @fat
-  /         %tr
-  /           %td 3
-  /           %td{colspan: "2"} Larry the Bird
-  /           %td @twitter
-  / .page-header
-  /   %h1 Thumbnails
-  / %img.img-thumbnail{alt: "200x200", "data-src" => "holder.js/200x200", src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEwMCIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEzcHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjAweDIwMDwvdGV4dD48L3N2Zz4=", style: "width: 200px; height: 200px;"}/
-  / .page-header
-  /   %h1 Labels
-  / %h1
-  /   %span.label.label-default Default
-  /   %span.label.label-primary Primary
-  /   %span.label.label-success Success
-  /   %span.label.label-info Info
-  /   %span.label.label-warning Warning
-  /   %span.label.label-danger Danger
-  / %h2
-  /   %span.label.label-default Default
-  /   %span.label.label-primary Primary
-  /   %span.label.label-success Success
-  /   %span.label.label-info Info
-  /   %span.label.label-warning Warning
-  /   %span.label.label-danger Danger
-  / %h3
-  /   %span.label.label-default Default
-  /   %span.label.label-primary Primary
-  /   %span.label.label-success Success
-  /   %span.label.label-info Info
-  /   %span.label.label-warning Warning
-  /   %span.label.label-danger Danger
-  / %h4
-  /   %span.label.label-default Default
-  /   %span.label.label-primary Primary
-  /   %span.label.label-success Success
-  /   %span.label.label-info Info
-  /   %span.label.label-warning Warning
-  /   %span.label.label-danger Danger
-  / %h5
-  /   %span.label.label-default Default
-  /   %span.label.label-primary Primary
-  /   %span.label.label-success Success
-  /   %span.label.label-info Info
-  /   %span.label.label-warning Warning
-  /   %span.label.label-danger Danger
-  / %h6
-  /   %span.label.label-default Default
-  /   %span.label.label-primary Primary
-  /   %span.label.label-success Success
-  /   %span.label.label-info Info
-  /   %span.label.label-warning Warning
-  /   %span.label.label-danger Danger
-  / %p
-  /   %span.label.label-default Default
-  /   %span.label.label-primary Primary
-  /   %span.label.label-success Success
-  /   %span.label.label-info Info
-  /   %span.label.label-warning Warning
-  /   %span.label.label-danger Danger
-  / .page-header
-  /   %h1 Badges
-  / %p
-  /   %a{href: "#"}
-  /     Inbox
-  /     %span.badge 42
-  / %ul.nav.nav-pills
-  /   %li.active
-  /     %a{href: "#"}
-  /       Home
-  /       %span.badge 42
-  /   %li
-  /     %a{href: "#"} Profile
-  /   %li
-  /     %a{href: "#"}
-  /       Messages
-  /       %span.badge 3
-  / .page-header
-  /   %h1 Dropdown menus
-  / .dropdown.theme-dropdown.clearfix
-  /   %a#dropdownMenu1.sr-only.dropdown-toggle{"data-toggle" => "dropdown", href: "#", role: "button"}
-  /     Dropdown
-  /     %span.caret
-  /   %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1", role: "menu"}
-  /     %li.active{role: "presentation"}
-  /       %a{href: "#", role: "menuitem", tabindex: "-1"} Action
-  /     %li{role: "presentation"}
-  /       %a{href: "#", role: "menuitem", tabindex: "-1"} Another action
-  /     %li{role: "presentation"}
-  /       %a{href: "#", role: "menuitem", tabindex: "-1"} Something else here
-  /     %li.divider{role: "presentation"}
-  /     %li{role: "presentation"}
-  /       %a{href: "#", role: "menuitem", tabindex: "-1"} Separated link
-  / .page-header
-  /   %h1 Navs
-  / %ul.nav.nav-tabs{role: "tablist"}
-  /   %li.active
-  /     %a{href: "#"} Home
-  /   %li
-  /     %a{href: "#"} Profile
-  /   %li
-  /     %a{href: "#"} Messages
-  / %ul.nav.nav-pills
-  /   %li.active
-  /     %a{href: "#"} Home
-  /   %li
-  /     %a{href: "#"} Profile
-  /   %li
-  /     %a{href: "#"} Messages
-  / .page-header
-  /   %h1 Navbars
-  / .navbar.navbar-default
-  /   .container
-  /     .navbar-header
-  /       %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
-  /         %span.sr-only Toggle navigation
-  /         %span.icon-bar
-  /         %span.icon-bar
-  /         %span.icon-bar
-  /       %a.navbar-brand{href: "#"} Project name
-  /     .navbar-collapse.collapse
+/   .page-header
+/     %h1 Buttons
+/   %p
+/     %button.btn.btn-lg.btn-default{type: "button"} Default
+/     %button.btn.btn-lg.btn-primary{type: "button"} Primary
+/     %button.btn.btn-lg.btn-success{type: "button"} Success
+/     %button.btn.btn-lg.btn-info{type: "button"} Info
+/     %button.btn.btn-lg.btn-warning{type: "button"} Warning
+/     %button.btn.btn-lg.btn-danger{type: "button"} Danger
+/     %button.btn.btn-lg.btn-link{type: "button"} Link
+/   %p
+/     %button.btn.btn-default{type: "button"} Default
+/     %button.btn.btn-primary{type: "button"} Primary
+/     %button.btn.btn-success{type: "button"} Success
+/     %button.btn.btn-info{type: "button"} Info
+/     %button.btn.btn-warning{type: "button"} Warning
+/     %button.btn.btn-danger{type: "button"} Danger
+/     %button.btn.btn-link{type: "button"} Link
+/   %p
+/     %button.btn.btn-sm.btn-default{type: "button"} Default
+/     %button.btn.btn-sm.btn-primary{type: "button"} Primary
+/     %button.btn.btn-sm.btn-success{type: "button"} Success
+/     %button.btn.btn-sm.btn-info{type: "button"} Info
+/     %button.btn.btn-sm.btn-warning{type: "button"} Warning
+/     %button.btn.btn-sm.btn-danger{type: "button"} Danger
+/     %button.btn.btn-sm.btn-link{type: "button"} Link
+/   %p
+/     %button.btn.btn-xs.btn-default{type: "button"} Default
+/     %button.btn.btn-xs.btn-primary{type: "button"} Primary
+/     %button.btn.btn-xs.btn-success{type: "button"} Success
+/     %button.btn.btn-xs.btn-info{type: "button"} Info
+/     %button.btn.btn-xs.btn-warning{type: "button"} Warning
+/     %button.btn.btn-xs.btn-danger{type: "button"} Danger
+/     %button.btn.btn-xs.btn-link{type: "button"} Link
+/   .page-header
+/     %h1 Tables
+/   .row
+/     .col-md-6
+/       %table.table
+/         %thead
+/           %tr
+/             %th #
+/             %th First Name
+/             %th Last Name
+/             %th Username
+/         %tbody
+/           %tr
+/             %td 1
+/             %td Mark
+/             %td Otto
+/             %td @mdo
+/           %tr
+/             %td 2
+/             %td Jacob
+/             %td Thornton
+/             %td @fat
+/           %tr
+/             %td 3
+/             %td Larry
+/             %td the Bird
+/             %td @twitter
+/     .col-md-6
+/       %table.table.table-striped
+/         %thead
+/           %tr
+/             %th #
+/             %th First Name
+/             %th Last Name
+/             %th Username
+/         %tbody
+/           %tr
+/             %td 1
+/             %td Mark
+/             %td Otto
+/             %td @mdo
+/           %tr
+/             %td 2
+/             %td Jacob
+/             %td Thornton
+/             %td @fat
+/           %tr
+/             %td 3
+/             %td Larry
+/             %td the Bird
+/             %td @twitter
+/   .row
+/     .col-md-6
+/       %table.table.table-bordered
+/         %thead
+/           %tr
+/             %th #
+/             %th First Name
+/             %th Last Name
+/             %th Username
+/         %tbody
+/           %tr
+/             %td{rowspan: "2"} 1
+/             %td Mark
+/             %td Otto
+/             %td @mdo
+/           %tr
+/             %td Mark
+/             %td Otto
+/             %td @TwBootstrap
+/           %tr
+/             %td 2
+/             %td Jacob
+/             %td Thornton
+/             %td @fat
+/           %tr
+/             %td 3
+/             %td{colspan: "2"} Larry the Bird
+/             %td @twitter
+/     .col-md-6
+/       %table.table.table-condensed
+/         %thead
+/           %tr
+/             %th #
+/             %th First Name
+/             %th Last Name
+/             %th Username
+/         %tbody
+/           %tr
+/             %td 1
+/             %td Mark
+/             %td Otto
+/             %td @mdo
+/           %tr
+/             %td 2
+/             %td Jacob
+/             %td Thornton
+/             %td @fat
+/           %tr
+/             %td 3
+/             %td{colspan: "2"} Larry the Bird
+/             %td @twitter
+/   .page-header
+/     %h1 Thumbnails
+/   %img.img-thumbnail{alt: "200x200", "data-src" => "holder.js/200x200", src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEwMCIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEzcHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjAweDIwMDwvdGV4dD48L3N2Zz4=", style: "width: 200px; height: 200px;"}/
+/   .page-header
+/     %h1 Labels
+/   %h1
+/     %span.label.label-default Default
+/     %span.label.label-primary Primary
+/     %span.label.label-success Success
+/     %span.label.label-info Info
+/     %span.label.label-warning Warning
+/     %span.label.label-danger Danger
+/   %h2
+/     %span.label.label-default Default
+/     %span.label.label-primary Primary
+/     %span.label.label-success Success
+/     %span.label.label-info Info
+/     %span.label.label-warning Warning
+/     %span.label.label-danger Danger
+/   %h3
+/     %span.label.label-default Default
+/     %span.label.label-primary Primary
+/     %span.label.label-success Success
+/     %span.label.label-info Info
+/     %span.label.label-warning Warning
+/     %span.label.label-danger Danger
+/   %h4
+/     %span.label.label-default Default
+/     %span.label.label-primary Primary
+/     %span.label.label-success Success
+/     %span.label.label-info Info
+/     %span.label.label-warning Warning
+/     %span.label.label-danger Danger
+/   %h5
+/     %span.label.label-default Default
+/     %span.label.label-primary Primary
+/     %span.label.label-success Success
+/     %span.label.label-info Info
+/     %span.label.label-warning Warning
+/     %span.label.label-danger Danger
+/   %h6
+/     %span.label.label-default Default
+/     %span.label.label-primary Primary
+/     %span.label.label-success Success
+/     %span.label.label-info Info
+/     %span.label.label-warning Warning
+/     %span.label.label-danger Danger
+/   %p
+/     %span.label.label-default Default
+/     %span.label.label-primary Primary
+/     %span.label.label-success Success
+/     %span.label.label-info Info
+/     %span.label.label-warning Warning
+/     %span.label.label-danger Danger
+/   .page-header
+/     %h1 Badges
+/   %p
+/     %a{href: "#"}
+/       Inbox
+/       %span.badge 42
+/   %ul.nav.nav-pills
+/     %li.active
+/       %a{href: "#"}
+/         Home
+/         %span.badge 42
+/     %li
+/       %a{href: "#"} Profile
+/     %li
+/       %a{href: "#"}
+/         Messages
+/         %span.badge 3
+/   .page-header
+/     %h1 Dropdown menus
+/   .dropdown.theme-dropdown.clearfix
+/     %a#dropdownMenu1.sr-only.dropdown-toggle{"data-toggle" => "dropdown", href: "#", role: "button"}
+/       Dropdown
+/       %span.caret
+/     %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1", role: "menu"}
+/       %li.active{role: "presentation"}
+/         %a{href: "#", role: "menuitem", tabindex: "-1"} Action
+/       %li{role: "presentation"}
+/         %a{href: "#", role: "menuitem", tabindex: "-1"} Another action
+/       %li{role: "presentation"}
+/         %a{href: "#", role: "menuitem", tabindex: "-1"} Something else here
+/       %li.divider{role: "presentation"}
+/       %li{role: "presentation"}
+/         %a{href: "#", role: "menuitem", tabindex: "-1"} Separated link
+/   .page-header
+/     %h1 Navs
+/   %ul.nav.nav-tabs{role: "tablist"}
+/     %li.active
+/       %a{href: "#"} Home
+/     %li
+/       %a{href: "#"} Profile
+/     %li
+/       %a{href: "#"} Messages
+/   %ul.nav.nav-pills
+/     %li.active
+/       %a{href: "#"} Home
+/     %li
+/       %a{href: "#"} Profile
+/     %li
+/       %a{href: "#"} Messages
+/   .page-header
+/     %h1 Navbars
+/   .navbar.navbar-default
+/     .container
+/       .navbar-header
+/         %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+/           %span.sr-only Toggle navigation
+/           %span.icon-bar
+/           %span.icon-bar
+/           %span.icon-bar
+/         %a.navbar-brand{href: "#"} Project name
+/       .navbar-collapse.collapse
 /         %ul.nav.navbar-nav
 /           %li.active
 /             %a{href: "#"} Home

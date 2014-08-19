@@ -1,29 +1,20 @@
 
 %h1.text-center
   =@item.name
-= link_to "Edit", edit_menu_item_path(@menu, @item)
-%br
-= link_to "Delete", menu_item_path(@menu, @item), method: :delete
+
 
 %div.row
-  %div.col-lg-4
+  %div.col-lg-4.col-lg-offset-4.text-center
   
-    %h3.text-center
+    %h3
       = @item.name
-      %br
-    %h4.text-center
+    
+    %h4
       = @item.price
-
-        
-    %ul
-      %li= @item.workflow_state
-      %li= @item.season
-      
-
-
-  %div.col-lg-8
-    %h3.text-center
-      Tables Go Here
+    = link_to "Edit", edit_menu_item_path(@menu, @item)
+    |
+    = link_to "Delete", menu_item_path(@menu, @item), method: :delete
+  
 
 
 
