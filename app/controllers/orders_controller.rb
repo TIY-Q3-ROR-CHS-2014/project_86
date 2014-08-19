@@ -23,7 +23,7 @@ class OrdersController < ApplicationController
     @order = Order.create order_params
 
     if @order.save
-      redirect_to restaurant_table_path(@restaurant, @table)
+      redirect_to restaurant_table_order_path(@restaurant, @table, @order)
     else
       render :new
     end

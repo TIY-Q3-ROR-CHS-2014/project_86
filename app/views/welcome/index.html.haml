@@ -1,29 +1,55 @@
-.theme-showcase{role: "main"}
-  / Main jumbotron for a primary marketing message or call to action
-  /.jumbotron
-  
 
+/ .navbar.navbar-inverse.navbar-fixed-top{:role => "navigation"}
+/   .container
+/     .navbar-header
+/       %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+/         %span.sr-only Toggle navigation
+/         %span.icon-bar
+/         %span.icon-bar
+/         %span.icon-bar
+/       %a.navbar-brand{:href => "#"} Project 86
+/     .navbar-collapse.collapse
+/       %form.navbar-form.navbar-right{:role => "form"}
+/         .form-group
+/           %input.form-control{:name => :email, :placeholder => "Email", :type => "text"}/
+/         .form-group
+/           %input.form-control{:placeholder => "Password", :type => "password"}/
+/         %button.btn.btn-success{:type => "submit"} Sign in
+/     / /.navbar-collapse
+/ / Main jumbotron for a primary marketing message or call to action
+/ .jumbotron
+/   .container
+/     %h1 Project 86 
+/     %p A new app to help communication in your restaurant. For a more effective FOH staff. For a better dining experience for your guests.
+/     %p
+/       %a.btn.btn-primary.btn-lg{:role => "button"} Learn more »
+/ .container
+/   / Example row of columns
+/   .row
+/     .col-md-4
+/       %h2 Locations
+/       %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+/       %p
+/         %a.btn.btn-default{:href => "#", :role => "button"} View details »
+/     .col-md-4
+/       %h2 Menus
+/       %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+/       %p
+/         %a.btn.btn-default{:href => "#", :role => "button"} View details »
+/     .col-md-4
+/       %h2 Inventory
+/       %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+/       %p
+/         %a.btn.btn-default{:href => "#", :role => "button"} View details »
+/   %hr/
+/   %footer
+/     %p © Company 2014
+/ /container
+/
+  Bootstrap core JavaScript
+  \==================================================
+/ Placed at the end of the document so the pages load faster
 
-
-
-
-
-  / #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
-  /   %ol.carousel-indicators
-  /     %li{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
-  /     %li.active{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
-  /     %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
-  /   .carousel-inner
-  /     .item
-  /       %img{alt: "Burger", "data-src" => "holder.js/1140x500/auto/#777:#555/text:Project 86", src: "burger.jpeg"}/
-  /     .item.active
-  /       %img{alt: "Second slide", "data-src" => "holder.js/1140x500/auto/#666:#444/text:Second slide", src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTQwIiBoZWlnaHQ9IjUwMCI+PHJlY3Qgd2lkdGg9IjExNDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjNjY2Ii8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNTcwIiB5PSIyNTAiIHN0eWxlPSJmaWxsOiM0NDQ7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6NzFweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj5TZWNvbmQgc2xpZGU8L3RleHQ+PC9zdmc+"}/
-  /     .item
-  /       %img{alt: "Third slide", "data-src" => "holder.js/1140x500/auto/#555:#333/text:Third slide", src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMTQwIiBoZWlnaHQ9IjUwMCI+PHJlY3Qgd2lkdGg9IjExNDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjNTU1Ii8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNTcwIiB5PSIyNTAiIHN0eWxlPSJmaWxsOiMzMzM7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXNpemU6NzFweDtmb250LWZhbWlseTpBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZjtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj5UaGlyZCBzbGlkZTwvdGV4dD48L3N2Zz4="}/
-  /   %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-example-generic", role: "button"}
-  /     %span.glyphicon.glyphicon-chevron-left
-  /   %a.right.carousel-control{"data-slide" => "next", href: "#carousel-example-generic", role: "button"}
-  /     %span.glyphicon.glyphicon-chevron-right
 #myCarousel.carousel.slide
   %ol.carousel-indicators
     %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
@@ -31,24 +57,24 @@
     %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
   .carousel-inner
     .item.active
-      %img.img-responsive{:src =>"assets/burger.jpeg", :alt => "Burger", :width => "100%",  :alignment => "center"}/
+      %img.img-responsive{:src =>"http://rtaadvertising.com/cliente/APPLEBEES/MACFRAN/MATERIALES%20MACFRAN/FOTOS/Bacon-Cheddar-Cheeseburger-6_2011-high-res.jpg", :alt => "Burger", :width => "100%",  :alignment => "center"}/
       .carousel-caption.center
         %h3 Project 86
         %p A new app to help communication in your restaurant
     .item
-      %img.img-responsive{:src => "assets/chix.jpeg", :alt => "Betty", :width => "100%", :alignment => "right"}/
+      %img.img-responsive{:src => "http://mms.businesswire.com/media/20140217005160/en/403414/5/Sandwich_ArtisanGrilledChicken-high-res_highres.jpg?download=1", :alt => "Betty", :width => "100%", :alignment => "right"}/
       .carousel-caption
         %h3 Project 86
         %p For a more effective FOH staff.
     .item
-      %img.img-responsive{:src => "assets/salad.jpg", :alt => "Salad", :width => "100%"}/
+      %img.img-responsive{:src => "http://www.public-domain-photos.com/free-stock-photos-4/drinks/pint-of-beer.jpg", :alt => "Salad", :width => "100%"}/
       .carousel-caption
         %h3 Project 86
         %p For a better dining experience for your guests.
 
-%a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"}
+  %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"}
   %span.icon-prev
-%a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"}
+  %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"}
   %span.icon-next
 
 
@@ -56,265 +82,265 @@
 
 
 
-%p
-  = link_to "Restaurants", restaurants_path, class: "btn btn-lg btn-primary"
-  = link_to "Menus", menus_path, class: "btn btn-lg btn-primary"
+/ %p
+/   = link_to "Restaurants", restaurants_path, class: "btn btn-lg btn-primary"
+/   = link_to "Menus", menus_path, class: "btn btn-lg btn-primary"
 
 
 
 
 
-  / .page-header
-  /   %h1 Buttons
-  / %p
-  /   %button.btn.btn-lg.btn-default{type: "button"} Default
-  /   %button.btn.btn-lg.btn-primary{type: "button"} Primary
-  /   %button.btn.btn-lg.btn-success{type: "button"} Success
-  /   %button.btn.btn-lg.btn-info{type: "button"} Info
-  /   %button.btn.btn-lg.btn-warning{type: "button"} Warning
-  /   %button.btn.btn-lg.btn-danger{type: "button"} Danger
-  /   %button.btn.btn-lg.btn-link{type: "button"} Link
-  / %p
-  /   %button.btn.btn-default{type: "button"} Default
-  /   %button.btn.btn-primary{type: "button"} Primary
-  /   %button.btn.btn-success{type: "button"} Success
-  /   %button.btn.btn-info{type: "button"} Info
-  /   %button.btn.btn-warning{type: "button"} Warning
-  /   %button.btn.btn-danger{type: "button"} Danger
-  /   %button.btn.btn-link{type: "button"} Link
-  / %p
-  /   %button.btn.btn-sm.btn-default{type: "button"} Default
-  /   %button.btn.btn-sm.btn-primary{type: "button"} Primary
-  /   %button.btn.btn-sm.btn-success{type: "button"} Success
-  /   %button.btn.btn-sm.btn-info{type: "button"} Info
-  /   %button.btn.btn-sm.btn-warning{type: "button"} Warning
-  /   %button.btn.btn-sm.btn-danger{type: "button"} Danger
-  /   %button.btn.btn-sm.btn-link{type: "button"} Link
-  / %p
-  /   %button.btn.btn-xs.btn-default{type: "button"} Default
-  /   %button.btn.btn-xs.btn-primary{type: "button"} Primary
-  /   %button.btn.btn-xs.btn-success{type: "button"} Success
-  /   %button.btn.btn-xs.btn-info{type: "button"} Info
-  /   %button.btn.btn-xs.btn-warning{type: "button"} Warning
-  /   %button.btn.btn-xs.btn-danger{type: "button"} Danger
-  /   %button.btn.btn-xs.btn-link{type: "button"} Link
-  / .page-header
-  /   %h1 Tables
-  / .row
-  /   .col-md-6
-  /     %table.table
-  /       %thead
-  /         %tr
-  /           %th #
-  /           %th First Name
-  /           %th Last Name
-  /           %th Username
-  /       %tbody
-  /         %tr
-  /           %td 1
-  /           %td Mark
-  /           %td Otto
-  /           %td @mdo
-  /         %tr
-  /           %td 2
-  /           %td Jacob
-  /           %td Thornton
-  /           %td @fat
-  /         %tr
-  /           %td 3
-  /           %td Larry
-  /           %td the Bird
-  /           %td @twitter
-  /   .col-md-6
-  /     %table.table.table-striped
-  /       %thead
-  /         %tr
-  /           %th #
-  /           %th First Name
-  /           %th Last Name
-  /           %th Username
-  /       %tbody
-  /         %tr
-  /           %td 1
-  /           %td Mark
-  /           %td Otto
-  /           %td @mdo
-  /         %tr
-  /           %td 2
-  /           %td Jacob
-  /           %td Thornton
-  /           %td @fat
-  /         %tr
-  /           %td 3
-  /           %td Larry
-  /           %td the Bird
-  /           %td @twitter
-  / .row
-  /   .col-md-6
-  /     %table.table.table-bordered
-  /       %thead
-  /         %tr
-  /           %th #
-  /           %th First Name
-  /           %th Last Name
-  /           %th Username
-  /       %tbody
-  /         %tr
-  /           %td{rowspan: "2"} 1
-  /           %td Mark
-  /           %td Otto
-  /           %td @mdo
-  /         %tr
-  /           %td Mark
-  /           %td Otto
-  /           %td @TwBootstrap
-  /         %tr
-  /           %td 2
-  /           %td Jacob
-  /           %td Thornton
-  /           %td @fat
-  /         %tr
-  /           %td 3
-  /           %td{colspan: "2"} Larry the Bird
-  /           %td @twitter
-  /   .col-md-6
-  /     %table.table.table-condensed
-  /       %thead
-  /         %tr
-  /           %th #
-  /           %th First Name
-  /           %th Last Name
-  /           %th Username
-  /       %tbody
-  /         %tr
-  /           %td 1
-  /           %td Mark
-  /           %td Otto
-  /           %td @mdo
-  /         %tr
-  /           %td 2
-  /           %td Jacob
-  /           %td Thornton
-  /           %td @fat
-  /         %tr
-  /           %td 3
-  /           %td{colspan: "2"} Larry the Bird
-  /           %td @twitter
-  / .page-header
-  /   %h1 Thumbnails
-  / %img.img-thumbnail{alt: "200x200", "data-src" => "holder.js/200x200", src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEwMCIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEzcHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjAweDIwMDwvdGV4dD48L3N2Zz4=", style: "width: 200px; height: 200px;"}/
-  / .page-header
-  /   %h1 Labels
-  / %h1
-  /   %span.label.label-default Default
-  /   %span.label.label-primary Primary
-  /   %span.label.label-success Success
-  /   %span.label.label-info Info
-  /   %span.label.label-warning Warning
-  /   %span.label.label-danger Danger
-  / %h2
-  /   %span.label.label-default Default
-  /   %span.label.label-primary Primary
-  /   %span.label.label-success Success
-  /   %span.label.label-info Info
-  /   %span.label.label-warning Warning
-  /   %span.label.label-danger Danger
-  / %h3
-  /   %span.label.label-default Default
-  /   %span.label.label-primary Primary
-  /   %span.label.label-success Success
-  /   %span.label.label-info Info
-  /   %span.label.label-warning Warning
-  /   %span.label.label-danger Danger
-  / %h4
-  /   %span.label.label-default Default
-  /   %span.label.label-primary Primary
-  /   %span.label.label-success Success
-  /   %span.label.label-info Info
-  /   %span.label.label-warning Warning
-  /   %span.label.label-danger Danger
-  / %h5
-  /   %span.label.label-default Default
-  /   %span.label.label-primary Primary
-  /   %span.label.label-success Success
-  /   %span.label.label-info Info
-  /   %span.label.label-warning Warning
-  /   %span.label.label-danger Danger
-  / %h6
-  /   %span.label.label-default Default
-  /   %span.label.label-primary Primary
-  /   %span.label.label-success Success
-  /   %span.label.label-info Info
-  /   %span.label.label-warning Warning
-  /   %span.label.label-danger Danger
-  / %p
-  /   %span.label.label-default Default
-  /   %span.label.label-primary Primary
-  /   %span.label.label-success Success
-  /   %span.label.label-info Info
-  /   %span.label.label-warning Warning
-  /   %span.label.label-danger Danger
-  / .page-header
-  /   %h1 Badges
-  / %p
-  /   %a{href: "#"}
-  /     Inbox
-  /     %span.badge 42
-  / %ul.nav.nav-pills
-  /   %li.active
-  /     %a{href: "#"}
-  /       Home
-  /       %span.badge 42
-  /   %li
-  /     %a{href: "#"} Profile
-  /   %li
-  /     %a{href: "#"}
-  /       Messages
-  /       %span.badge 3
-  / .page-header
-  /   %h1 Dropdown menus
-  / .dropdown.theme-dropdown.clearfix
-  /   %a#dropdownMenu1.sr-only.dropdown-toggle{"data-toggle" => "dropdown", href: "#", role: "button"}
-  /     Dropdown
-  /     %span.caret
-  /   %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1", role: "menu"}
-  /     %li.active{role: "presentation"}
-  /       %a{href: "#", role: "menuitem", tabindex: "-1"} Action
-  /     %li{role: "presentation"}
-  /       %a{href: "#", role: "menuitem", tabindex: "-1"} Another action
-  /     %li{role: "presentation"}
-  /       %a{href: "#", role: "menuitem", tabindex: "-1"} Something else here
-  /     %li.divider{role: "presentation"}
-  /     %li{role: "presentation"}
-  /       %a{href: "#", role: "menuitem", tabindex: "-1"} Separated link
-  / .page-header
-  /   %h1 Navs
-  / %ul.nav.nav-tabs{role: "tablist"}
-  /   %li.active
-  /     %a{href: "#"} Home
-  /   %li
-  /     %a{href: "#"} Profile
-  /   %li
-  /     %a{href: "#"} Messages
-  / %ul.nav.nav-pills
-  /   %li.active
-  /     %a{href: "#"} Home
-  /   %li
-  /     %a{href: "#"} Profile
-  /   %li
-  /     %a{href: "#"} Messages
-  / .page-header
-  /   %h1 Navbars
-  / .navbar.navbar-default
-  /   .container
-  /     .navbar-header
-  /       %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
-  /         %span.sr-only Toggle navigation
-  /         %span.icon-bar
-  /         %span.icon-bar
-  /         %span.icon-bar
-  /       %a.navbar-brand{href: "#"} Project name
-  /     .navbar-collapse.collapse
+/   .page-header
+/     %h1 Buttons
+/   %p
+/     %button.btn.btn-lg.btn-default{type: "button"} Default
+/     %button.btn.btn-lg.btn-primary{type: "button"} Primary
+/     %button.btn.btn-lg.btn-success{type: "button"} Success
+/     %button.btn.btn-lg.btn-info{type: "button"} Info
+/     %button.btn.btn-lg.btn-warning{type: "button"} Warning
+/     %button.btn.btn-lg.btn-danger{type: "button"} Danger
+/     %button.btn.btn-lg.btn-link{type: "button"} Link
+/   %p
+/     %button.btn.btn-default{type: "button"} Default
+/     %button.btn.btn-primary{type: "button"} Primary
+/     %button.btn.btn-success{type: "button"} Success
+/     %button.btn.btn-info{type: "button"} Info
+/     %button.btn.btn-warning{type: "button"} Warning
+/     %button.btn.btn-danger{type: "button"} Danger
+/     %button.btn.btn-link{type: "button"} Link
+/   %p
+/     %button.btn.btn-sm.btn-default{type: "button"} Default
+/     %button.btn.btn-sm.btn-primary{type: "button"} Primary
+/     %button.btn.btn-sm.btn-success{type: "button"} Success
+/     %button.btn.btn-sm.btn-info{type: "button"} Info
+/     %button.btn.btn-sm.btn-warning{type: "button"} Warning
+/     %button.btn.btn-sm.btn-danger{type: "button"} Danger
+/     %button.btn.btn-sm.btn-link{type: "button"} Link
+/   %p
+/     %button.btn.btn-xs.btn-default{type: "button"} Default
+/     %button.btn.btn-xs.btn-primary{type: "button"} Primary
+/     %button.btn.btn-xs.btn-success{type: "button"} Success
+/     %button.btn.btn-xs.btn-info{type: "button"} Info
+/     %button.btn.btn-xs.btn-warning{type: "button"} Warning
+/     %button.btn.btn-xs.btn-danger{type: "button"} Danger
+/     %button.btn.btn-xs.btn-link{type: "button"} Link
+/   .page-header
+/     %h1 Tables
+/   .row
+/     .col-md-6
+/       %table.table
+/         %thead
+/           %tr
+/             %th #
+/             %th First Name
+/             %th Last Name
+/             %th Username
+/         %tbody
+/           %tr
+/             %td 1
+/             %td Mark
+/             %td Otto
+/             %td @mdo
+/           %tr
+/             %td 2
+/             %td Jacob
+/             %td Thornton
+/             %td @fat
+/           %tr
+/             %td 3
+/             %td Larry
+/             %td the Bird
+/             %td @twitter
+/     .col-md-6
+/       %table.table.table-striped
+/         %thead
+/           %tr
+/             %th #
+/             %th First Name
+/             %th Last Name
+/             %th Username
+/         %tbody
+/           %tr
+/             %td 1
+/             %td Mark
+/             %td Otto
+/             %td @mdo
+/           %tr
+/             %td 2
+/             %td Jacob
+/             %td Thornton
+/             %td @fat
+/           %tr
+/             %td 3
+/             %td Larry
+/             %td the Bird
+/             %td @twitter
+/   .row
+/     .col-md-6
+/       %table.table.table-bordered
+/         %thead
+/           %tr
+/             %th #
+/             %th First Name
+/             %th Last Name
+/             %th Username
+/         %tbody
+/           %tr
+/             %td{rowspan: "2"} 1
+/             %td Mark
+/             %td Otto
+/             %td @mdo
+/           %tr
+/             %td Mark
+/             %td Otto
+/             %td @TwBootstrap
+/           %tr
+/             %td 2
+/             %td Jacob
+/             %td Thornton
+/             %td @fat
+/           %tr
+/             %td 3
+/             %td{colspan: "2"} Larry the Bird
+/             %td @twitter
+/     .col-md-6
+/       %table.table.table-condensed
+/         %thead
+/           %tr
+/             %th #
+/             %th First Name
+/             %th Last Name
+/             %th Username
+/         %tbody
+/           %tr
+/             %td 1
+/             %td Mark
+/             %td Otto
+/             %td @mdo
+/           %tr
+/             %td 2
+/             %td Jacob
+/             %td Thornton
+/             %td @fat
+/           %tr
+/             %td 3
+/             %td{colspan: "2"} Larry the Bird
+/             %td @twitter
+/   .page-header
+/     %h1 Thumbnails
+/   %img.img-thumbnail{alt: "200x200", "data-src" => "holder.js/200x200", src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEwMCIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEzcHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjAweDIwMDwvdGV4dD48L3N2Zz4=", style: "width: 200px; height: 200px;"}/
+/   .page-header
+/     %h1 Labels
+/   %h1
+/     %span.label.label-default Default
+/     %span.label.label-primary Primary
+/     %span.label.label-success Success
+/     %span.label.label-info Info
+/     %span.label.label-warning Warning
+/     %span.label.label-danger Danger
+/   %h2
+/     %span.label.label-default Default
+/     %span.label.label-primary Primary
+/     %span.label.label-success Success
+/     %span.label.label-info Info
+/     %span.label.label-warning Warning
+/     %span.label.label-danger Danger
+/   %h3
+/     %span.label.label-default Default
+/     %span.label.label-primary Primary
+/     %span.label.label-success Success
+/     %span.label.label-info Info
+/     %span.label.label-warning Warning
+/     %span.label.label-danger Danger
+/   %h4
+/     %span.label.label-default Default
+/     %span.label.label-primary Primary
+/     %span.label.label-success Success
+/     %span.label.label-info Info
+/     %span.label.label-warning Warning
+/     %span.label.label-danger Danger
+/   %h5
+/     %span.label.label-default Default
+/     %span.label.label-primary Primary
+/     %span.label.label-success Success
+/     %span.label.label-info Info
+/     %span.label.label-warning Warning
+/     %span.label.label-danger Danger
+/   %h6
+/     %span.label.label-default Default
+/     %span.label.label-primary Primary
+/     %span.label.label-success Success
+/     %span.label.label-info Info
+/     %span.label.label-warning Warning
+/     %span.label.label-danger Danger
+/   %p
+/     %span.label.label-default Default
+/     %span.label.label-primary Primary
+/     %span.label.label-success Success
+/     %span.label.label-info Info
+/     %span.label.label-warning Warning
+/     %span.label.label-danger Danger
+/   .page-header
+/     %h1 Badges
+/   %p
+/     %a{href: "#"}
+/       Inbox
+/       %span.badge 42
+/   %ul.nav.nav-pills
+/     %li.active
+/       %a{href: "#"}
+/         Home
+/         %span.badge 42
+/     %li
+/       %a{href: "#"} Profile
+/     %li
+/       %a{href: "#"}
+/         Messages
+/         %span.badge 3
+/   .page-header
+/     %h1 Dropdown menus
+/   .dropdown.theme-dropdown.clearfix
+/     %a#dropdownMenu1.sr-only.dropdown-toggle{"data-toggle" => "dropdown", href: "#", role: "button"}
+/       Dropdown
+/       %span.caret
+/     %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1", role: "menu"}
+/       %li.active{role: "presentation"}
+/         %a{href: "#", role: "menuitem", tabindex: "-1"} Action
+/       %li{role: "presentation"}
+/         %a{href: "#", role: "menuitem", tabindex: "-1"} Another action
+/       %li{role: "presentation"}
+/         %a{href: "#", role: "menuitem", tabindex: "-1"} Something else here
+/       %li.divider{role: "presentation"}
+/       %li{role: "presentation"}
+/         %a{href: "#", role: "menuitem", tabindex: "-1"} Separated link
+/   .page-header
+/     %h1 Navs
+/   %ul.nav.nav-tabs{role: "tablist"}
+/     %li.active
+/       %a{href: "#"} Home
+/     %li
+/       %a{href: "#"} Profile
+/     %li
+/       %a{href: "#"} Messages
+/   %ul.nav.nav-pills
+/     %li.active
+/       %a{href: "#"} Home
+/     %li
+/       %a{href: "#"} Profile
+/     %li
+/       %a{href: "#"} Messages
+/   .page-header
+/     %h1 Navbars
+/   .navbar.navbar-default
+/     .container
+/       .navbar-header
+/         %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+/           %span.sr-only Toggle navigation
+/           %span.icon-bar
+/           %span.icon-bar
+/           %span.icon-bar
+/         %a.navbar-brand{href: "#"} Project name
+/       .navbar-collapse.collapse
 /         %ul.nav.navbar-nav
 /           %li.active
 /             %a{href: "#"} Home

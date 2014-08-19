@@ -1,10 +1,29 @@
 %h1 Menu's Index
 
-%div
-  %ul
+.row
   - @menus.each do |menu|
-    %li
+    .col-sm-3
+      .panel.panel-default
+        .panel-heading
+          %h3.panel-title
+            = link_to menu.name + " | " + menu.description, menu_path(menu)
+        .panel-body
+          %ul
+            - menu.items.each do |item|
+              %li
+                = item.name
+                = item.price
+            / %li ...
 
-      %h3= link_to menu.name, menu_path(menu)
+      / = link_to restaurant.name, restaurant_path(restaurant)
+      / |
+      / = link_to "Edit", edit_restaurant_path(restaurant)
+      / |
+      / = link_to "Delete", restaurant_path(restaurant), method: :delete
+  .col-sm-3
+    .panel.panel-primary
+      .panel-heading
+        %h3.panel-title
+          = link_to "Add Menu", new_menu_path
+      .panel-body
 
-= link_to "Add Menu Item", new_menu_path
